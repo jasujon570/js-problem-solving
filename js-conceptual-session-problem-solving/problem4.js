@@ -1,19 +1,14 @@
 function validProposal(input1, input2) {
-    if (
-      input1.gender === input2.gender &&
-      Math.abs(input1.age - input2.age) > 7
-    ) {
-      return false;
-    }
+  if (typeof input1 !== "object" || typeof input2 !== "object") {
+    return "Invalid";
+  }
+  if (
+    input1.gender !== input2.gender &&
+    Math.abs(input1.age - input2.age) <= 7
+  ) {
     return true;
-
-  // if (
-  //   input1.gender !== input2.gender &&
-  //   Math.abs(input1.age - input2.age) >! 7
-  // ) {
-  //   return true;
-  // }
-  // return false;
+  }
+  return false;
 }
 console.log(
   validProposal(
