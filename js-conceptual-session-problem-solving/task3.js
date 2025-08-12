@@ -21,4 +21,25 @@ function countVowels(str) {
 }
 
 const result = countVowels('Jhankar miA');
-console.log(result);
+// console.log(result);
+
+
+console.log('-------------------');
+
+function vowelsCounter(thisIsAString){
+    if(typeof thisIsAString !== 'string'){
+        return 'Invalid';
+    }
+    // console.log(thisIsAString);
+    const vowels = 'aeiouAEIOU';
+    let count = 0;
+
+    for (const element of thisIsAString) {
+        if(vowels.includes(element)){
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(vowelsCounter(["Jhankar miA"]));
